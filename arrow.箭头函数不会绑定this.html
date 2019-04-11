@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // function Counter(){
+    //     this.num = 0
+    //     this.timer = setInterval(function add() {
+    //         this.num++
+    //         console.log(this.num)
+    //     },1000)
+    // }
+    // var b = new Counter()
+    // clearInterval(b.timer)
+
+    // 箭头函数写代码拥有更加简洁的语法；不会绑定this。
+    // 箭头函数表达式的语法比函数表达式更短，并且不绑定自己的this，arguments，
+    // super或 new.target。这些函数表达式最适合用于非方法函数
+    // (non-method functions)，并且它们不能用作构造函数
+
+    function Counter(){
+        this.num = 0
+        this.timer = setInterval(() => {
+            this.num++
+            console.log(this.num)
+        },1000)
+    }
+    var b = new Counter()
+    clearInterval(b.timer)
+</script>
+</html>
